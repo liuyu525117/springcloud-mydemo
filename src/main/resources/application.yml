@@ -1,0 +1,50 @@
+#spring:
+#    datasource:
+#        name: test
+#        url: jdbc:mysql://192.168.16.137:3306/test
+#        username: root
+#        password:
+        # 使用druid数据源
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        driver-class-name: com.mysql.jdbc.Driver
+#        filters: stat
+#        maxActive: 20
+#        initialSize: 1
+#        maxWait: 60000
+#        minIdle: 1
+#        timeBetweenEvictionRunsMillis: 60000
+#        minEvictableIdleTimeMillis: 300000
+#        validationQuery: select 'x'
+#        testWhileIdle: true
+#        testOnBorrow: false
+#        testOnReturn: false
+#        poolPreparedStatements: true
+#        maxOpenPreparedStatements: 20
+        
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+    
+#无配置文件注解版
+mybatis:
+  type-aliases-package: com.liuyu.model
+  #配置文件版
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+
+#rocketmq配置
+rmq:
+  namesrvAddr: 192.168.0.99:9876;192.168.0.98:9876
+  instanceName: reservation
+  defaultProducer: defaultProducer
+  transactionProducer: transactionProducer
+  defaultConsumer: defaultConsumer
+  orderConsumer: orderConsumer
+  defaultTopic: default,test
+  orderTopic: order
+  
+server:
+  port: 8082
