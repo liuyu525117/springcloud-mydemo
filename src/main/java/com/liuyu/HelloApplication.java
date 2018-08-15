@@ -19,6 +19,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 //@EnableConfigurationProperties(RocketmqProperties.class)
 public class HelloApplication {
 
+	//测试git用
 	public static void main(String[] args) {
 		SpringApplication.run(HelloApplication.class, args);
 	}
