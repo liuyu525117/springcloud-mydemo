@@ -6,3 +6,6 @@
 1、集成rocketmq
 2、集成redis
 3、集成mongodb
+
+
+日志配置：参考https://blog.csdn.net/dingxingmei/article/details/88558492

@@ -1,6 +1,8 @@
 package com.liuyu.web;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +19,11 @@ public class CommonRedisController {
 	private StringRedisTemplate stringRedisTemplate;
 
 	@Autowired
+	@Qualifier("redisTemplate")
 	private RedisTemplate<String, User> redisTemplate;
 	
 	@Autowired
+	@Qualifier("redisTemplate2")
 	private RedisTemplate<String, String> redisList;
 	
 	/**

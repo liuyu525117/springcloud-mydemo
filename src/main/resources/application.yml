@@ -48,3 +48,7 @@ rmq:
   
 server:
   port: 8082
+
+#配置日志路径 
+logging:
+  file: myweb.log

@@ -4,6 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class StockRedisController {
 	
 	@Autowired
+	@Qualifier("redisTemplate2")
 	private RedisTemplate<String, String> redisList;
 	
 	private static final long STOCK_NUM = 100; //库存数量
